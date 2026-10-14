@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study With Sarvesh</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#f7f9fc;color:#172554}
+nav{background:#102347;color:white;padding:18px 7%;
+display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{font-size:23px;font-weight:bold}
+.logo span{color:#ff7900}
+nav a{color:white;text-decoration:none;margin:6px;font-size:14px}
+.hero{background:linear-gradient(120deg,#102347,#174c85);
+color:white;padding:75px 8%;display:flex;align-items:center;
+justify-content:space-between;gap:30px;flex-wrap:wrap}
+.hero-text{max-width:580px}
+.hero h1{font-size:clamp(34px,5vw,55px);line-height:1.2;margin-bottom:20px}
+.hero h1 span{color:#ff7900}
+.hero p{font-size:18px;line-height:1.8;color:#e2eaff}
+.btn{display:inline-block;background:#ff7900;color:white;
+padding:13px 20px;border-radius:8px;text-decoration:none;
+font-weight:bold;margin-top:22px;border:0;cursor:pointer}
+.hero-art{font-size:100px;text-align:center;flex:1;min-width:180px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;padding:28px 7%}
+.feature{background:white;padding:20px;border-radius:12px;
+border:1px solid #dce6f4;text-align:center}
+.feature b{display:block;margin:10px 0}
+section{padding:45px 7%}
+.heading{text-align:center;font-size:32px;margin-bottom:10px}
+.sub{text-align:center;color:#64748b;margin-bottom:28px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{padding:25px;border-radius:13px;background:white;
+border:1px solid #dce6f4;box-shadow:0 5px 18px #1725540d}
+.card .emoji{font-size:36px}
+.card h3{margin:12px 0;color:#123b79;font-size:23px}
+.card p{color:#526078;line-height:1.7}
+.card a{display:inline-block;background:#123b79;color:white;
+padding:11px 16px;border-radius:25px;text-decoration:none;margin-top:15px}
+.orange{background:#fff5ec}
+.green{background:#eafaf3}
+.purple{background:#f3efff}
+.about{background:#102347;color:white;text-align:center}
+.about p{max-width:650px;margin:15px auto;line-height:1.8;color:#e2eaff}
+footer{background:#09162e;color:#cbd5e1;padding:24px;text-align:center}
+@media(max-width:600px){
+nav{padding:16px 5%}
+nav .links{display:flex;flex-wrap:wrap}
+.hero{padding:48px 6%}
+section{padding:35px 6%}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">🎓 Study With <span>Sarvesh</span></div>
+  <div class="links">
+    <a href="#home">Home</a>
+    <a href="#class11">Class 11</a>
+    <a href="#class12">Class 12</a>
+    <a href="#neet">NEET Practice</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-text">
+    <h1>आपकी तैयारी,<br><span>आपकी सफलता!</span></h1>
+    <p>Class 11, Class 12 और NEET की तैयारी के लिए
+    आपका अपना Learning Platform।</p>
+    <p>आसान Notes, महत्वपूर्ण Concepts और MCQs के साथ
+    अपनी तैयारी को बेहतर बनाएँ।</p>
+    <a class="btn" href="#classes">पढ़ाई शुरू करें →</a>
+  </div>
+  <div class="hero-art">📚 🎓 🧑‍🎓</div>
+</header>
+
+<div class="features">
+  <div class="feature">📗<b>Class 11 Notes</b>Chapter-wise Revision</div>
+  <div class="feature">📘<b>Class 12 Notes</b>Board और NEET तैयारी</div>
+  <div class="feature">🎯<b>NEET MCQs</b>Practice Questions</div>
+  <div class="feature">📅<b>Study Tips</b>सही Study Plan</div>
+</div>
+
+<section id="classes">
+  <h2 class="heading">अपनी क्लास चुनें</h2>
+  <p class="sub">अपने लक्ष्य की ओर पहला कदम बढ़ाएँ</p>
+  <div class="cards">
+    <article class="card" id="class11">
+      <div class="emoji">📗</div>
+      <h3>Class 11 Biology</h3>
+      <p>Biology के Chapters, आसान Notes और महत्वपूर्ण MCQs से Revision करें।</p>
+      <a href="#neet">Explore Class 11 →</a>
+    </article>
+    <article class="card orange" id="class12">
+      <div class="emoji">🎓</div>
+      <h3>Class 12 Biology</h3>
+      <p>महत्वपूर्ण Concepts, Chapter-wise Notes और Practice Questions पढ़ें।</p>
+      <a href="#neet">Explore Class 12 →</a>
+    </article>
+    <article class="card green" id="neet">
+      <div class="emoji">🎯</div>
+      <h3>NEET Practice</h3>
+      <p>अपनी तैयारी जाँचने के लिए एक नमूना प्रश्न हल करें।</p>
+      <p><b>प्रश्न:</b> जीवन की मूल इकाई क्या है?</p>
+      <button class="btn" onclick="checkAnswer()">उत्तर देखें</button>
+      <p id="answer" aria-live="polite"></p>
+    </article>
+    <article class="card purple">
+      <div class="emoji">💡</div>
+      <h3>Study Tips</h3>
+      <p>समय का सही उपयोग करें, नियमित Revision करें और छोटे लक्ष्य बनाएँ।</p>
+      <a href="#about">और जानें →</a>
+    </article>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2 class="heading">हमारा उद्देश्य</h2>
+  <p>Study With Sarvesh का उद्देश्य विद्यार्थियों को
+  आसान, व्यवस्थित और उपयोगी Educational Resources उपलब्ध कराना है।</p>
+  <p><b>Study Smart. Stay Consistent.</b></p>
+</section>
+
+<footer>
+  © 2026 Study With Sarvesh | Educational Resources for Students
+</footer>
+
+<script>
+function checkAnswer(){
+  document.getElementById("answer").textContent =
+  "सही उत्तर: Cell (कोशिका)।";
+}
+</script>
+</body>
+</html>
